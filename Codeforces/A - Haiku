@@ -1,0 +1,26 @@
+function isVowel( s){
+  var cnt=0;
+  for(var i=0; i<s.length; i++){
+    if( s[i]=='a' || s[i]=='u' || s[i]=='o' || s[i]=='i' || s[i]=='e'){
+      cnt++;
+    }
+  }
+  return cnt;
+  
+}
+
+var s1=readline();
+var s2=readline();
+var s3=readline();
+// var r1=isVowel(s1);
+// var r2=isVowel(s2);
+// var r3=isVowel(s3);
+// print(r1,r2,r3)
+
+if(isVowel(s1)==5 && isVowel(s2)==7 && isVowel(s3)==5){
+  print("YES");
+}
+else{
+  print("NO");
+}
+
