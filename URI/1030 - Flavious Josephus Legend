@@ -1,0 +1,50 @@
+
+"use strict";
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+ 
+function print(x) {
+  console.log(x);
+}
+let inputString = "";
+let currentLine = 0;
+ 
+process.stdin.on("data", (inputStdin) => {
+  inputString += inputStdin;
+});
+process.stdin.on("end", () => {
+  inputString = inputString.split("\n");
+  main();
+});
+function readline() {
+  return inputString[currentLine++];
+}
+ 
+// ********** Code Start **********
+
+function main() {
+  // your code goes here
+  function solve(n,k)
+  {
+    var res=0;
+    for(var i=1; i<=n; i++){
+      res=(res+k)%i;
+    }
+    return res+1;
+  }
+  
+  var t=+readline();
+  var cs=1;
+  while(t--){
+    var input= readline();
+    var arr= input.split(' ').map(x=>+x);
+    var n= arr[0];
+    var k= arr[1];
+    var res= solve(n,k);
+    print('Case '+cs+ ': '+res)
+    cs++;
+  
+  }
+  
+}
+
