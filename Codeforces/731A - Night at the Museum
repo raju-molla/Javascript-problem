@@ -1,0 +1,12 @@
+var s= readline();
+var flag=97;
+var ans=0;
+for(var i=0; i<s.length; i++){
+ var p=s.charCodeAt(i);
+ var def= Math.abs(flag-p);
+ if(def>13)def=26-def;
+ ans+=def;
+ flag=p;
+}
+
+print(ans)
