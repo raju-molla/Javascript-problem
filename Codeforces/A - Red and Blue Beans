@@ -1,0 +1,17 @@
+
+var t=+ readline();
+while(t--){
+    var input= readline();
+    var arr= input.split(" ").map(x=>+x);
+    var r=arr[0];
+    var b=arr[1];
+    var d=arr[2];
+    if(r>b){
+        var temp=r;
+        r=b;
+        b=temp;
+    }
+    var res=r*(d+1);
+    if(res>=b)print("YES")
+    else print("NO");
+}
