@@ -1,0 +1,11 @@
+function gcd(a,b){
+    if(b==0)return a;
+    return gcd(b,a%b);
+}
+
+var t=+ readline();
+while(t--){
+    var n=+ readline();
+    var p= gcd(100,n);
+    print(100/p);
+}
