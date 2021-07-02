@@ -1,0 +1,19 @@
+
+var a=+readline();
+while(a--){
+    var n=+readline();
+    if(n%2===0){
+        var j,i;
+        for(i=2, j=1; i<=n && j<=n; i+=2, j+=2){
+            print(i,j);
+        }
+    }
+    else{
+        print('3 1 2')
+        var j,i;
+        for( i=5, j=4; i<=n && j<=n; i+=2, j+=2){
+            print(i, j);
+        }
+    }
+    
+}
