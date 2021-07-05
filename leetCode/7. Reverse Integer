@@ -1,0 +1,21 @@
+var reverse = function(x) {
+ var s='';
+    if(x<0){
+        s+='-';
+        x=-(x);
+    }
+    while(x>0){
+        s+=(x%10);
+        // console.log(s);
+        x=parseInt(x/10)
+    }
+    
+    if((+s)>2147483647 ||(+s)<-2147483647){
+        return 0;
+    }
+    else{
+        return s;
+    }
+
+
+}
